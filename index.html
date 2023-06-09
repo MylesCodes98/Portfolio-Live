@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UK-Compatible" content="IE=mozilla">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Myles' Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="annoymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src= "">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p><span class = "multiple-text"></span></p>
+            <h1>Hello, I'm <span>Myles</span><br>From Birmingham, England</h1> 
+        </div>
+    </div>
+</div>
+<!------------about------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/phone.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Myles Taylor. I have always had an interest in Technology. 
+                    I have studied computing throughout my life, from School to University. 
+                    The idea of being able to create something through code has always been fascinating to me hence the decision to study Computer Science. I create projects in my spare time, extending my knowledge in Web Development.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>HTML, CSS, JS, C#</li>
+                        <li><span>QA Tester</span><br>Manual/Automation Testing</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2010-2015 School (Cockshut Hill)</span><br>9 GCSE's</li>
+                        <li><span>2015-2017 College (Solihull College)</span><br>BTEC IT Software Development</li>
+                        <li><span>2017-2020 University (Coventry University)</span><br>Computer Science</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------services------------>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code fa-spin fa-spin-reverse"></i>
+                <h2>Web Developement (HTML,CSS,JS)</h2>
+                <p>
+                </p>
+                <a href="#"></a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-laptop-code fa-spin fa-spin-reverse"></i>
+                <h2>Software Testing (Manual/Automation)</h2>
+                <p>
+                </p>
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------portfolio---------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/coffee-table.jpg">
+                <div class="layer">
+                    <h3>Coffee Website</h3>
+                    <p>This is my Coffee Shop website called Cup of Delight.</p>
+                    <a href="https://github.com/MylesCodes98/Coffee-Shop"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/movie-background.jpeg">
+                <div class="layer">
+                    <h3>Movie App (TMDB API)</h3>
+                    <p>Movie App showcasing movies using the TMDB API.</p>
+                    <a href="https://github.com/MylesCodes98/MovieApp-API/tree/main"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/pokedex.jpg">
+                <div class="layer">
+                    <h3>Pokedex (PokeAPI)</h3>
+                    <p>Pokedex created using the PokeAPI.</p>
+                    <a href="https://github.com/MylesCodes98/Pokedex"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/MylesCodes98/" class="btn">See more</a>
+    </div>
+</div>
+<!---------contact--------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-regular fa-paper-plane"></i> mylestaylor16@outlook.com</p>
+                <p><i class="fa-solid fa-phone"></i> 07512207702</p>
+                <a href="" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Myles Taylor</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+
+<script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+<script src="script.js"></script>                                                                   
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyrjs7G1pNCq5E9d9zkwAFoWlDr2EKMbKOABgS5IOsZjAP-Z2zPvaJPUiQDQUq7PUE/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
